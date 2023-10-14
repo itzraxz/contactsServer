@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const logger = require("./middleware/logger");
+//const logger = require("./middleware/logger");
 const contactsApiRouter = require("./routes/api/contacts");
 const rootRouter = require("./routes/root");
 const cors = require("cors");
@@ -25,7 +25,7 @@ app.use(cors());
 
 app.use((req, res, next) => {
   console.log("Server Request Arrived");
-  logger(req.method, req.url, req.headers.origin, "requestLog.txt");
+  //logger(req.method, req.url, req.headers.origin, "requestLog.txt");
   next();
 });
 
@@ -40,7 +40,7 @@ app.use("*", (req, res) => {
 
 app.use((err, req, res) => {
   if (err) {
-    logger(req.method, req.path, req.headers.origin, "errorLog.txt");
+    //logger(req.method, req.path, req.headers.origin, "errorLog.txt");
     res.status(200)
     res.send({message: err.message})
   }
