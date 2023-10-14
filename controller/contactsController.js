@@ -16,7 +16,7 @@ const getContact = (req, res) => {
   const requestedContact = contacts.contactsList.find(
     (contact) => contact.id === Number(req.params.id)
   );
-  if (requestedContact.length > 0) {
+  if (requestedContact) {
     res.send(requestedContact);
   } else {
     res.status(400);
