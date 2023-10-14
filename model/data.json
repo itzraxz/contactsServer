@@ -1,0 +1,13 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Dhoni",
+      "mobileNo": 3847585758,
+      "email": "abc@gmail.com",
+      "instaId": "itsme",
+      "profession": "Web Developer",
+      "address": "Dubai Kuruku Sandhu"
+    }
+  ]
+}
