@@ -13,7 +13,7 @@ const getAllContacts = (req, res) => {
 };
 
 const getContact = (req, res) => {
-  const requestedContact = contacts.contactsList.filter(
+  const requestedContact = contacts.contactsList.find(
     (contact) => contact.id === Number(req.params.id)
   );
   if (requestedContact.length > 0) {
